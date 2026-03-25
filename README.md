@@ -35,7 +35,7 @@ npm run dev
 
 ## 🌍 Live Demo
 
-👉 (add your deployed link here)
+[👉 (Versel deployement link here)](https://react-mastery-neex.vercel.app/)
 
 ## 📸 Screenshots
 
