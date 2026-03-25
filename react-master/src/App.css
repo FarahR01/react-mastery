@@ -1,0 +1,109 @@
+/* ── App Header ────────────────────────────────────────────── */
+
+.app-header {
+  background: #ffffff;
+  border-bottom: 1.5px solid #e2e8f0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+.app-header__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header__logo {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;            /* dark text — readable on white header */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.2px;
+  transition: color 0.18s ease;
+}
+
+.app-header__logo:hover {
+  color: #4f46e5;
+}
+
+.app-header__nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.app-header__link {
+  color: #475569;            /* readable slate on white */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.app-header__link:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* ── Main Content ──────────────────────────────────────────── */
+
+.app-main {
+  min-height: calc(100vh - 61px);
+  background: #f8fafc;       /* very light slate — restful, not stark white */
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .app-header__container {
+    padding: 0 16px;
+    height: 54px;
+  }
+
+  .app-header__logo { font-size: 14px; }
+
+  .app-header__link { font-size: 13px; padding: 6px 10px; }
+}
+
+/* ── Dark Mode ─────────────────────────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+  .app-header {
+    background: #0f172a;
+    border-bottom-color: #1e293b;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .app-header__logo {
+    color: #f1f5f9;
+  }
+
+  .app-header__logo:hover {
+    color: #818cf8;
+  }
+
+  .app-header__link {
+    color: #94a3b8;
+  }
+
+  .app-header__link:hover {
+    background: #1e293b;
+    color: #f1f5f9;
+  }
+
+  .app-main {
+    background: #0f172a;
+  }
+}
