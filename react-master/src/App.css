@@ -2,12 +2,12 @@
 
 .app-header {
   background: #ffffff;
-  border-bottom: 1.5px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
   padding: 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .app-header__container {
@@ -23,13 +23,13 @@
 .app-header__logo {
   font-size: 16px;
   font-weight: 700;
-  color: #0f172a;            /* dark text — readable on white header */
+  color: #1a202c;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;
   letter-spacing: -0.2px;
-  transition: color 0.18s ease;
+  transition: color 0.2s ease;
 }
 
 .app-header__logo:hover {
@@ -43,25 +43,27 @@
 }
 
 .app-header__link {
-  color: #475569;            /* readable slate on white */
+  color: #6b7280;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   padding: 7px 14px;
   border-radius: 8px;
-  transition: background 0.18s ease, color 0.18s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .app-header__link:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: #f3f4f6;
+  color: #1a202c;
 }
 
 /* ── Main Content ──────────────────────────────────────────── */
 
 .app-main {
   min-height: calc(100vh - 61px);
-  background: #f8fafc;       /* very light slate — restful, not stark white */
+  background: #f8fafc;
 }
 
 /* ── Responsive ────────────────────────────────────────────── */
@@ -72,30 +74,35 @@
     height: 54px;
   }
 
-  .app-header__logo { font-size: 14px; }
+  .app-header__logo {
+    font-size: 14px;
+  }
 
-  .app-header__link { font-size: 13px; padding: 6px 10px; }
+  .app-header__link {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
 }
 
 /* ── Dark Mode ─────────────────────────────────────────────── */
 
 @media (prefers-color-scheme: dark) {
   .app-header {
-    background: #0f172a;
-    border-bottom-color: #1e293b;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    background: #1a2332;
+    border-bottom-color: #2d3f52;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
 
   .app-header__logo {
-    color: #f1f5f9;
+    color: #eceff5;
   }
 
   .app-header__logo:hover {
-    color: #818cf8;
+    color: #8b93f7;
   }
 
   .app-header__link {
-    color: #94a3b8;
+    color: #a8b5c7;
   }
 
   .app-header__link:hover {
