@@ -1,4 +1,4 @@
-# react-mastery : 🚀 React User Dashboard
+# react-mastery 
 
 ## 📌 Overview
 
@@ -56,4 +56,4 @@ npm run dev
 
 ## 👩‍💻 Author
 
-Farah
+Farah Rihane
