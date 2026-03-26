@@ -35,23 +35,12 @@
     }
   },
   "regions": ["iad1"],
-  "buildCache": {
-    "enabled": true
-  },
   "nodeVersion": "24.x",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "buildMachine": {
-    "type": "performance"
-  },
   "skewProtection": {
-    "enabled": true,
-    "supportedVersions": "all"
-  },
-  "concurrency": {
-    "builds": 8,
-    "deployments": 4
+    "enabled": true
   },
   "env": {
     "NODE_ENV": "production",
