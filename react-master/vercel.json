@@ -1,0 +1,60 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "vite",
+  "env": {
+    "NODE_VERSION": "24.x"
+  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "nodejs24.x",
+      "maxDuration": 30,
+      "memory": 3008
+    }
+  },
+  "regions": ["iad1"],
+  "buildCache": {
+    "enabled": true
+  },
+  "nodeVersion": "24.x",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "buildMachine": {
+    "type": "performance"
+  },
+  "skewProtection": {
+    "enabled": true,
+    "supportedVersions": "all"
+  },
+  "concurrency": {
+    "builds": 8,
+    "deployments": 4
+  },
+  "env": {
+    "NODE_ENV": "production",
+    "VITE_APP_ENV": "production"
+  }
+}
