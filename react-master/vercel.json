@@ -1,12 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "skewProtection": {
-    "enabled": true
-  },
-  "env": {
-    "NODE_ENV": "production",
-    "VITE_APP_ENV": "production"
-  }
+  "framework": "vite"
 }
